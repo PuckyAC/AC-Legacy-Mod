@@ -113,4 +113,12 @@ public class ScriptWorld {
         }
         return result;
     }
+
+    public void setPlayerSpawn(int aX, int aY, int aZ) {
+        this.setPlayerSpawn(aX,aY,aZ,0);
+    }
+    public void setPlayerSpawn(int aX, int aY, int aZ, float aYaw) {
+        world.levelData.setSpawnXYZ(aX, aY, aZ);
+        ((ExWorld) world).setSpawnYaw(aYaw);
+    }
 }
