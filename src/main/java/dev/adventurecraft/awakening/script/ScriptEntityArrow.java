@@ -1,6 +1,7 @@
 package dev.adventurecraft.awakening.script;
 
 import dev.adventurecraft.awakening.extension.entity.projectile.ExArrowEntity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.Arrow;
 
 @SuppressWarnings("unused")
@@ -41,4 +42,8 @@ public class ScriptEntityArrow extends ScriptEntity {
     public int getAttackStrength(){
         return ((ExArrowEntity)this.entityArrow).getAttackStrength();
     }
+
+    public void setOwner(LivingEntity entity){((ExArrowEntity)this.entityArrow).setOwner(entity);}
+
+    public void setOwner(ScriptEntityPlayer entity){this.setOwner(entity.entityLiving);}
 }

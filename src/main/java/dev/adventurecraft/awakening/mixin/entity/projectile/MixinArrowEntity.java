@@ -221,4 +221,7 @@ public abstract class MixinArrowEntity extends MixinEntity implements ExArrowEnt
     public void setAttackStrength(int value) {
         this.attackStrength = value;
     }
+
+    @Override
+    public void setOwner(LivingEntity entity){this.owner = entity;}
 }
